@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>Online Learning Platform</header>
+
+  <div class="container">
+    <form id="subscribeForm">
+      <label for="username">Full Name</label>
+      <input type="text" id="username" name="username" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course" required>
+        <option value="">Choose a course</option>
+        <option value="Web Development">Web Development</option>
+        <option value="Data Science">Data Science</option>
+        <option value="UI/UX Design">UI/UX Design</option>
+      </select>
+
+      <button type="submit">Subscribe</button>
+      <div id="formMessage" class="message"></div>
+    </form>
+
+    <div class="course-preview">
+      <div class="course-card">Web Dev Basics</div>
+      <div class="course-card">JavaScript Essentials</div>
+      <div class="course-card">Intro to Data Science</div>
+      <div class="course-card">UI Design Principles</div>
+    </div>
+
+    <div class="subscription-list">
+      <h3>Subscription Records</h3>
+      <ul id="subscriptionRecords"></ul>
+    </div>
+
+    <div class="video-section">
+      <h3>Course Videos</h3>
+      <div id="videoMessage" class="message"></div>
+      <button onclick="watchVideo('Web Development')">Watch Web Development Video</button>
+      <button onclick="watchVideo('Data Science')">Watch Data Science Video</button>
+      <button onclick="watchVideo('UI/UX Design')">Watch UI/UX Design Video</button>
+
+      <div id="videoContainer" style="display: none; margin-top: 1rem;">
+        <iframe id="youtubeFrame" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
